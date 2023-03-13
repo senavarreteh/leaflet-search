@@ -1002,8 +1002,8 @@
       // set location on map from _recordsCache
       const self = this;
 
-      self._map.once("moveend zoomend", function (e) {
-        if (self._markerSearch && title != "") {
+      self._map.once("moveend", function (e) {
+        if (self._markerSearch) {
           self._markerSearch.addTo(self._map).setLatLng(latlng);
         }
       });
